@@ -16,3 +16,8 @@ newman run <nome da coleção> --data <nome do arquivo> -n <nº de iterações> 
 
 Defina o tempo de atraso. Isso é importante, pois os testes podem falhar se forem executados sem atraso, devido a solicitações iniciadas sem que a solicitação anterior conclua o processamento no servidor de terminal.
 newman run <nome da coleção> -d <tempo de atraso>
+
+
+https://api.predic8.de/shop/docs#/
+
+https://api.predic8.de/shop
