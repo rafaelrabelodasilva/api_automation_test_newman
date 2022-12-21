@@ -96,13 +96,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/customers/345",
+					"raw": "{{url}}/customers/361",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"customers",
-						"345"
+						"361"
 					]
 				}
 			},
@@ -127,13 +127,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/customers/1/orders/",
+					"raw": "{{url}}/customers/361/orders/",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"customers",
-						"1",
+						"361",
 						"orders",
 						""
 					]
