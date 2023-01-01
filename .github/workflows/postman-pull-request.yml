@@ -1,8 +1,15 @@
-name: Test-Build
+name: Test-API-newman
 on:
+  schedule:
+  - cron: "0 */6 * * 1-5"
+  
   push:
     branches:
-      - main
+     - 'main'
+      
+  workflow_dispatch:
+      
+      
 jobs:
   test-api:
     runs-on: ubuntu-latest
@@ -23,8 +30,6 @@ jobs:
         run: |
           npm install -g newman
           npm install -g newman-reporter-htmlextra
-
-
       # Make directory to upload the test results
       - name: Make Directory for results
         run: mkdir -p testResults
@@ -33,14 +38,11 @@ jobs:
       # Run the POSTMAN collection
       - name: Run POSTMAN collection on real time
         run: |
-          newman run minha_colecao.postman_collection.json -e workspace.postman_globals.json 
-
+          newman run minha_colecao.postman_collection.json -e workspace.postman_globals.json
       # Run the POSTMAN collection
       - name: Run POSTMAN collection
         run: |
           newman run minha_colecao.postman_collection.json -e workspace.postman_globals.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
-
-
       # Upload the contents of Test Results directory to workspace
       - name: Output the run Details
         uses: actions/upload-artifact@v2
