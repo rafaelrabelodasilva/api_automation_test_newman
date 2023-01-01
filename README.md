@@ -4,6 +4,10 @@ Projeto criado com intuíto de exercitar os testes automatizados via API. Infeli
 
 ## Observações
 
+Para começar o projeto do zero usando o Newman basta instalar o NodeJS (caso não tenha instalado ainda em sua máquina) e instalar o Newman:<br>
+
+`npm install -g newman`
+
 Para rodar o projeto basta executar o comando abaixo no terminal:<br>
 `newman run minha_colecao.postman_collection.json -e workspace.postman_globals.json`
 
@@ -27,3 +31,8 @@ Link da API de frutas que foi utilizada no projeto: <a href="https://api.predic8
 
 - Para definir o tempo de atraso. Isso é importante, pois os testes podem falhar se forem executados sem atraso, devido a solicitações iniciadas sem que a solicitação anterior conclua o processamento no servidor de terminal:<br>
 `newman run <nome da coleção> -d <tempo de atraso>`
+
+## Execução no terminal
+
+Abaixo gif exibindo a execução dos testes no terminal:<br>
+![gif](./images/execucao-testes.gif "Exibindo execução dos testes no terminal")
