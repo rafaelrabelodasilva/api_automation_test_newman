@@ -38,6 +38,37 @@
 			"response": []
 		},
 		{
+			"name": "{{url}}/categories/Exotic",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/categories/Exotic",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"categories",
+						"Exotic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "{{url}}/customers/",
 			"event": [
 				{
@@ -63,6 +94,117 @@
 					"path": [
 						"customers",
 						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/customers/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstname\": \"Rafael\",\r\n  \"lastname\": \"Rabelo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/customers/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/customers/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/customers/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/customers/357",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstname\": \"Freddy\",\r\n  \"lastname\": \"Meyers\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/customers/357",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"customers",
+						"357"
 					]
 				}
 			},
@@ -96,20 +238,20 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/customers/361",
+					"raw": "{{url}}/customers/1",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"customers",
-						"361"
+						"1"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "{{url}}/customers/1/orders/",
+			"name": "{{url}}/customers/7",
 			"event": [
 				{
 					"listen": "test",
@@ -123,19 +265,29 @@
 					}
 				}
 			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstname\": \"Alfonso\",\r\n  \"lastname\": \"Nazareno\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "{{url}}/customers/361/orders/",
+					"raw": "{{url}}/customers/7",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"customers",
-						"361",
-						"orders",
-						""
+						"7"
 					]
 				}
 			},
@@ -198,6 +350,113 @@
 					"path": [
 						"orders",
 						"301"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/products/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/products/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/vendors/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/vendors/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"vendors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/customers/351/orders/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"createdAt\": \"2023-01-01\",\r\n  \"updatedAt\": \"2023-01-01\",\r\n  \"state\": \"created\",\r\n  \"customer_url\": \"/shop/customers/351\",\r\n  \"actions\": {\r\n    \"purchase\": {\r\n      \"url\": \"/shop/orders/7959/actions/purchase\",\r\n      \"method\": \"POST\"\r\n    }\r\n  },\r\n  \"items_url\": \"kiwi\",\r\n  \"total\": \"4.50\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/customers/351/orders/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"customers",
+						"351",
+						"orders",
+						""
 					]
 				}
 			},
