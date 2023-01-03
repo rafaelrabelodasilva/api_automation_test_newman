@@ -18,11 +18,11 @@ jobs:
       - uses: actions/checkout@v2
 
 
-      # INstall Node on the runner
+      # Install Node on the runner
       - name: Install Node
         uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
+          node-version: "18.x"
 
 
       # Install the newman command line utility and also install the html extra reporter
