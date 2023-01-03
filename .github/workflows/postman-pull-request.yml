@@ -31,11 +31,11 @@ jobs:
       
       - name: Run POSTMAN collection on real time
         run: |
-          newman run Shopping_Frutas.postman_collection.json -e workspace.postman_globals.json 
+          newman run minha_colecao.postman_collection.json -e workspace.postman_globals.json 
       
       - name: Run POSTMAN collection
         run: |
-          newman run Shopping_Frutas.postman_collection.json -e workspace.postman_globals.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
+          newman run minha_colecao.postman_collection.json -e workspace.postman_globals.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
       - name: Output the run Details
         uses: actions/upload-artifact@v2
         with:
