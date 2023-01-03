@@ -9,12 +9,16 @@ jobs:
     steps:
       
       - uses: actions/checkout@v2
+
+
       
       - name: Install Node
         uses: actions/setup-node@v1
         with:
           node-version: "12.x"
 
+
+      
       - name: Install newman
         run: |
           npm install -g newman
@@ -23,13 +27,15 @@ jobs:
       - name: Make Directory for results
         run: mkdir -p testResults
 
+
+      
       - name: Run POSTMAN collection on real time
         run: |
-          newman run colecao.postman_collection.json -e workspace.postman_globals.json 
+          newman run primeira_colecao.postman_collection.json -e workspace.postman_globals.json 
       
       - name: Run POSTMAN collection
         run: |
-          newman run colecao.postman_collection.json -e workspace.postman_globals.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
+          newman run primeira_colecao.postman_collection.json -e workspace.postman_globals.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
       - name: Output the run Details
         uses: actions/upload-artifact@v2
         with:
