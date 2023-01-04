@@ -34,5 +34,5 @@ Link da API de frutas que foi utilizada no projeto: <a href="https://api.predic8
 
 ## Execução no terminal
 
-Abaixo gif exibindo a execução dos testes no terminal:<br>
+Abaixo gif exibindo a execução dos testes no terminal, no exemplo abaixo executando pelo terminal apresentou erro (status code `400`) no caminho `{{url}}/orders/301` porém ao executar no Postman percebemos que o cenário é diferente pois apresentou status `200`: <br>
 ![gif](./images/execucao-testes.gif "Exibindo execução dos testes no terminal")
