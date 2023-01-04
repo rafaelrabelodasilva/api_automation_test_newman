@@ -39,6 +39,10 @@ Abaixo gif exibindo a execução dos testes no terminal, no exemplo abaixo execu
 
 ## Execução do job no Github Actions
 
-Efetuado automação com o Github Actions onde a cada commit efetuado o job é rodado gerando o relatório do newman automaticamente e inserindo o mesmo dentro da pasta `testResults`. Para que a automação fosse rodada foi criado o arquivo `main.yml` com códigos necessários para que o job rodasse corretamente.
+Efetuado automação com o Github Actions onde a cada commit efetuado o job é rodado gerando o relatório do newman automaticamente e inserindo o mesmo dentro da pasta `testResults`. Para que a automação fosse rodada foi criado o arquivo `main.yml` com códigos necessários para que o job rodasse corretamente. 
 
+![img](./images/job-finalizado-com-sucesso.png "Github actions - job finalizado com sucesso")
 
+Após o job ser finalizado o relatório estará na pasta `testResults` o qual ao ser aberto exibirá o relatório do newman:
+
+![img](./images/relatorio-newman.gif "Exibindo relatório do newman")
