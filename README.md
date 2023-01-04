@@ -2,6 +2,8 @@
 
 Projeto criado com intuíto de exercitar os testes automatizados via API. Infelizmente a API tinha alguns mal funcionamentos que acabaram dificultando a criação de mais cenários de testes. Como por exemplo a URL `/orders/` que não aceitava o **GET** e a grande maioria que utilizava os métodos **DELETE** e **PUT** pois como a API é pública vários usuários estão diariamente inserindo e deletando informações e como estes métodos precisam do ID haviam situações que apresentavam sucesso e logo sem seguida já falhavam. Desta forma resolvi remover as automações que não apresentavam sucesso para que eu pudesse rodar a automação no GitHub Actions.
 
+Efetuado automação com o Github Actions onde a cada commit efetuado o job é rodado gerando o relatório do newman automaticamente e inserindo o mesmo dentro da pasta `testResults`. Para que a automação fosse rodada foi criado o arquivo `main.yml` com códigos necessários para que o job rodasse corretamente.
+
 ## Observações
 
 Para começar o projeto do zero usando o Newman basta instalar o NodeJS (caso não tenha instalado ainda em sua máquina) e instalar o Newman:<br>
@@ -39,7 +41,7 @@ Abaixo gif exibindo a execução dos testes no terminal, no exemplo abaixo execu
 
 ## Execução do job no Github Actions
 
-Efetuado automação com o Github Actions onde a cada commit efetuado o job é rodado gerando o relatório do newman automaticamente e inserindo o mesmo dentro da pasta `testResults`. Para que a automação fosse rodada foi criado o arquivo `main.yml` com códigos necessários para que o job rodasse corretamente. 
+Ao efetuar um commit na branch **main** o job é rodado automaticamente:
 
 ![img](./images/job-finalizado-com-sucesso.png "Github actions - job finalizado com sucesso")
 
