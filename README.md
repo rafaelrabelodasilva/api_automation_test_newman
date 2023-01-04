@@ -36,3 +36,9 @@ Link da API de frutas que foi utilizada no projeto: <a href="https://api.predic8
 
 Abaixo gif exibindo a execução dos testes no terminal, no exemplo abaixo executando pelo terminal apresentou erro (status code `400`) no caminho `{{url}}/orders/301` porém ao executar no Postman percebemos que o cenário é diferente pois apresentou status `200`: <br>
 ![gif](./images/execucao-testes.gif "Exibindo execução dos testes no terminal")
+
+## Execução do job no Github Actions
+
+Efetuado automação com o Github Actions onde a cada commit efetuado o job é rodado gerando o relatório do newman automaticamente e inserindo o mesmo dentro da pasta `testResults`. Para que a automação fosse rodada foi criado o arquivo `main.yml` com códigos necessários para que o job rodasse corretamente.
+
+
