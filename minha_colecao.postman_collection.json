@@ -354,37 +354,6 @@
 				}
 			},
 			"response": []
-		},
-		{
-			"name": "{{url}}/orders/301",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{url}}/orders/301",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"orders",
-						"301"
-					]
-				}
-			},
-			"response": []
 		}
 	]
 }
