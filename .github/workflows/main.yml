@@ -1,8 +1,11 @@
 name: Test-Build
+
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
 jobs:
   test-api:
     runs-on: ubuntu-latest
